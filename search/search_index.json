@@ -1,1 +1,1 @@
-{"config":{"lang":["en"],"separator":"[\\s\\-]+","pipeline":["stopWordFilter"]},"docs":[{"location":"","title":"Over View","text":""}]}
+{"config":{"lang":["en"],"separator":"[\\s\\-]+","pipeline":["stopWordFilter"]},"docs":[{"location":"","title":"Over View","text":"<p>PureRustRobot\u3068\u306f\u7d14\u7c8b\u306aRust\u306e\u307f\u3067\u30ed\u30dc\u30c3\u30c8\u3092\u52d5\u304b\u305d\u3046\u3068\u3044\u3046\u30d7\u30ed\u30b8\u30a7\u30af\u30c8\u3067\u3059\u3002</p> <p></p>"}]}
