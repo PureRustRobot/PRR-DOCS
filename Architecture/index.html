@@ -321,7 +321,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Contribution/develop_environment_guide.md" class="md-nav__link">
+      <a href="../Contribution/develop_environment_guide/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -524,9 +524,9 @@
 </tbody>
 </table>
 <h2 id="_2">メッセージ通信</h2>
-<p><strong>serde</strong>を用いたシリアライズ、デシリアライズを用いた通信をしています。
-メッセージ構造体を定義したリポジトリは<a href="../Libraries/prr_msgs/">こちら</a>にあります。
-以下はひとつの例です。</p>
+<p><strong>serde</strong>を用いたシリアライズ、デシリアライズをderiveしたメッセージ通信をしています。
+メッセージ構造体を定義した<a href="../Libraries/prr_msgs/">prr_msgs</a>を使用しています。
+以下はメッセージのひとつの例です。</p>
 <p>```:rs</p>
 <h1 id="deriveserialize-deserialize">[derive(Serialize, Deserialize)]</h1>
 <p>pub struct Wheel{
@@ -534,6 +534,15 @@
     pub  front_right:f32,
     pub  rear_left:f32,
     pub  rear_right:f32,
+}</p>
+<p>pub fn serialize_wheel(value:&amp;Wheel)-&gt;String
+{
+    serde_json::to_string(value).unwrap()
+}
+pub fn deserialize_wheel(str_value:String)-&gt;Wheel
+{
+    let result:Wheel = serde_json::from_str(&amp;str_value).unwrap();
+    result
 }
 ```</p>
 <p>また、<a href="../Libraries/zenoh_msg_generator/">メッセージ構造体ライブラリを生成するツール</a>を使い.msgファイルから、メッセージパッケージを
