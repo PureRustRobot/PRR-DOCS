@@ -686,15 +686,15 @@
 <p><strong>serde</strong>を用いたシリアライズ、デシリアライズをderiveしたメッセージ通信をしています。
 メッセージ構造体を定義した<a href="../Libraries/prr_msgs/">prr_msgs</a>を使用しています。
 以下はメッセージのひとつの例です。</p>
-<p>```:rs</p>
-<h1 id="deriveserialize-deserialize">[derive(Serialize, Deserialize)]</h1>
-<p>pub struct Wheel{
+<div class="highlight"><pre><span></span><code>#[derive(Serialize, Deserialize)]
+pub struct Wheel{
     pub  front_left:f32,
     pub  front_right:f32,
     pub  rear_left:f32,
     pub  rear_right:f32,
-}</p>
-<p>pub fn serialize_wheel(value:&amp;Wheel)-&gt;String
+}
+
+pub fn serialize_wheel(value:&amp;Wheel)-&gt;String
 {
     serde_json::to_string(value).unwrap()
 }
@@ -703,7 +703,7 @@ pub fn deserialize_wheel(str_value:String)-&gt;Wheel
     let result:Wheel = serde_json::from_str(&amp;str_value).unwrap();
     result
 }
-```</p>
+</code></pre></div>
 <p>また、<a href="../Libraries/zenoh_msg_generator/">メッセージ構造体ライブラリを生成するツール</a>を使い.msgファイルから、メッセージパッケージを
 容易に作成することができます。</p>
 
