@@ -38,20 +38,12 @@ nav:
 
   - Node:
     - OverView: Nodes/index.md
-    - command controller: Nodes/command_controller.md
-    - joy publisher: Nodes/joy_publisher.md
-    - keyboard publisher: Nodes/keyboard_publisher.md
-    - motor controller: Nodes/motor_controller.md
-    - serial transporter: Nodes/serial_transporter.md
 
   - Libraries:
     - OverView: Libraries/index.md
-    - prr msgs: Libraries/prr_msgs.md
-    - zenoh manage utils: Libraries/zenoh_manage_utils.md
-    - zenoh message generator: Libraries/zenoh_msg_generator.md
 
   - Contribution:
     - OverView: Contribution/index.md
-    - Setup environment: Contribution/DevEnvGuide.md
-    - Start Zenoh: Contribution/StartZenoh.md
-  - Architecture: Architecture/index.md
+
+  - Architecture: 
+    - OverView: Architecture/index.md
